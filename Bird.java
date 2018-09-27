@@ -3,7 +3,6 @@ package sampletest;
 public  class Bird extends Animal{
 	protected static Integer value =0;
 
-	
 	void fly() {
 		System.out.println("I am Flying");
 		count(1);
