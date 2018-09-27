@@ -20,7 +20,7 @@ public class SampleRestController {
 		// database and process and need to send back to cleint as well
 		ClientResource resource = new ClientResource("http://localhost:8080/animals");
 
-		Responseresponse = resource.getResponse();
+		Response response = resource.getResponse();
 
 		if (response.getStatus().isSuccess()) {
 			//process your logic
