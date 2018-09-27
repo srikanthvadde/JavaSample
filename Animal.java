@@ -3,47 +3,32 @@ package sampletest;
 public class Animal {
 
 	protected static Integer value;
-	
-	public Integer getValue() {
+
+	Integer count(Integer i) {
+		value = i;
 		return value;
 	}
 
-	public void setValue(Integer value) {
-		this.value = value;
+	void swim() {
+		System.out.println("Animal cant swim"+"\n");
+		count(0);
+	}
+
+	void fly() {
+		System.out.println("Animal cant flying"+"\n");
+		count(0);
+	}
+
+	void sing() {
+		System.out.println("Animal Cant sing"+"\n");
+		count(0);
 	}
 
 	void walk() {
-		System.out.println("I am walking");
-		
+		System.out.println("Animal Can walk"+"\n");
+		count(1);
+
 	}
-	
-	
-	Integer count(Integer i) {
-		System.out.println("Count");
-		return value;
-	}
-	
-void swim()
-{
-	System.out.println("I am swimming");
-}
 
-void fly()
-{
-	System.out.println("I am flying");
-}
-
-
-void sing()
-{
-System.out.println("I am singing");
-}
-
-
-
-
-
-
-	 
 }
 
