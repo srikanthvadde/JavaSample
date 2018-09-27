@@ -2,6 +2,10 @@ package sampletest;
 
 public class Solution extends Animal {
 
+	private static final Animal[] animals = new Animal[] { new Bird(), new Duck(), new Chicken(), new Rooster(),
+			new Parrot(), new Fish(), new Shark(), new Dolphin(), new ClownFish(), new Dog(), new Butterfly(),
+			new Cat() };
+
 	public static void main(String... strings) {
 
 		// 1st answer
@@ -26,16 +30,17 @@ public class Solution extends Animal {
 		b1.sing();
 
 		// A.3rd answer
-		if (bird.getGender().equals(bird.getChicken().gender)) {
-			bird.getChicken().fly();
-			bird.getChicken().sing();
-		} else if (bird.getGender().equals(bird.getRooster().gender)) {
-			bird.getRooster().fly();
-			bird.getRooster().sing();
+		Bird chicken = new Chicken();
+		Bird rooster = new Rooster();
+		if (chicken.getGender().equals(bird.getGender())) {
+			chicken.fly();
+			chicken.sing();
+		} else if (rooster.getGender().equals(bird.getGender())) {
+			rooster.fly();
+			rooster.sing();
 		}
 
 		// A.4TH ANSWER
-
 		Parrot p1 = new Dog();
 		Parrot p2 = new Cat();
 		Parrot p3 = new Rooster();
@@ -76,27 +81,23 @@ public class Solution extends Animal {
 
 			animals[i].fly();
 			newcnt = newcnt + Animal.value;
-			System.out.println(newcnt);
 
 			animals[i].sing();
 			newsingCount = newsingCount + Animal.value;
-			System.out.println(newsingCount);
 
 			animals[i].swim();
 			newswimCount = newswimCount + Animal.value;
-			System.out.println(newswimCount);
 
 			animals[i].walk();
 			newwalkCount = newwalkCount + Animal.value;
-			System.out.println(newwalkCount);
 
 		}
 
+		System.out.println(newcnt);
+		System.out.println(newsingCount);
+		System.out.println(newswimCount);
+		System.out.println(newwalkCount);
+
 	}
-		
-
-
-private static final Animal[] animals = new Animal[] { new Bird(), new Duck(),new Chicken(),new Rooster(),new Parrot(),new Fish(),new Shark(),new Dolphin(),new ClownFish(),new Dog(),new Butterfly(),new Cat()};
-
 
 }
