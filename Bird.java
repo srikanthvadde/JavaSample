@@ -1,49 +1,37 @@
 package sampletest;
 
-public  class Bird extends Animal{
-	protected static Integer value =0;
+public class Bird extends Animal {
+	private String gender = "M";
 
+	@Override
 	void fly() {
-		System.out.println("I am Flying");
+		System.out.println("I am Flying" + "\n");
 		count(1);
 	}
-	
+
 	@Override
 	Integer count(Integer i) {
-		System.out.println("Count");
-		super.setValue(1);
-		return 1;
+		Animal.value = i;
+		return value;
 	}
-	
-	
+
+	@Override
 	public void sing() {
-		System.out.print("I am singing");
+		System.out.print("I am singing" + "\n");
 		count(1);
 	}
-	
-	
-	public void walk() {
-		System.out.print("I cant walk");
+
+	@Override
+	public void swim() {
+		System.out.print("Bird wont swim" + "\n");
 		count(0);
 	}
-	
-	public Chicken getChicken() {
-		return chicken;
+
+	@Override
+	public void walk() {
+		System.out.print("Bird can walk" + "\n");
+		count(1);
 	}
-
-	public void setChicken(Chicken chicken) {
-		this.chicken = chicken;
-	}
-
-
-	public Rooster getRooster() {
-		return rooster;
-	}
-
-	public void setRooster(Rooster rooster) {
-		this.rooster = rooster;
-	}
-
 
 	public String getGender() {
 		return gender;
@@ -52,23 +40,5 @@ public  class Bird extends Animal{
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-
-
-@Override
-	public Integer getValue() {
-		return value;
-	}
-
-@Override
-	public void setValue(Integer value) {
-		this.value = value;
-	}
-
-	private Chicken chicken = new Chicken();
-	private Rooster rooster = new Rooster();
-
-	
-	
-	private String gender ="M";
 
 }
