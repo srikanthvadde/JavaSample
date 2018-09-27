@@ -10,12 +10,6 @@ public class Bird extends Animal {
 	}
 
 	@Override
-	Integer count(Integer i) {
-		Animal.value = i;
-		return value;
-	}
-
-	@Override
 	public void sing() {
 		System.out.print("I am singing" + "\n");
 		count(1);
